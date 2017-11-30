@@ -18,7 +18,7 @@ def main():
 def run_test_sum_cosines():
     """ Tests the   sum_cosines   function. """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this function.
+    # DONE: 2. Implement this function.
     #   It TESTS the  sum_cosines  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -34,11 +34,11 @@ def run_test_sum_cosines():
     answer = sum_cosines(0)
     print('Test 1 expected:', expected)
     print('       actual:  ', answer)
-    expected = 10.941
+    expected = -0.4174477464559059
     answer = sum_cosines(10)
     print('Test 2 expected:', expected)
     print('       actual:  ', answer)
-    expected = 3.997868
+    expected = 0.134162972720552
     answer = sum_cosines(3)
     print('Test 3 expected:', expected)
     print('       actual:  ', answer)
@@ -63,9 +63,8 @@ def sum_cosines(n):
     # ------------------------------------------------------------------
 
     total = 0
-    for k in range(n):
-        total = total + ( math.cos(k+1))
-
+    for k in range(n+1):
+        total = total + (math.cos(k))
     return total
 
 def run_test_sum_square_roots():
